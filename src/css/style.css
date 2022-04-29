@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    list-style: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+:root{
+    --bg-color: #273128;
+    --elements-color: #fff;
+    --elements-hover: #495C4B;
+    --tertiary-color:#765b51;
+    --quarter-color: #7D442F;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-chess{
+    width: 200px;
+    height: 62px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.box-profile{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    max-width: 1221px;
+    width: 100%;
+    padding: 20px;
+  
+    transition: all 0.5s ease-in;
+    flex-wrap: wrap;
+}
+
+.grid{
+    grid:
+        "profile profile mode-game" 
+        "profile profile mode-game"  
+        "profile profile mode-game"
+        "clubs clubs clubs" ;
+        gap: 20px;
+}
+
+.mode-game{
+    background-color: var(--elements-color);
+    border-radius: 10px;
+    /* max-width: 382px; */
+    width: 100%;
+}
+
+.input-search{
+    grid-area: search;
+}
+
+#profile{
+    grid-area: profile;
+}
+
+.mode-game{
+    grid-area: mode-game;
+}
+
+#profile{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    border-radius: 10px;
+    transition: all 0.5s ease-in;
+    background-color: var(--elements-color);
+    width: 100%;
+    /* max-width: 763px; */
+}
+
+.joined{
+    color: var(--elements-hover);
+}
+
+.search{
+    display: flex;
+    align-items: center;
+
+    background-color: var(--elements-color);
+    height: 45px;
+
+    border-radius: 10px;
+}
+
+.search i {
+    padding: 8px 8px 8px 12px;
+}
+
+.input-search{
+    width: 100%;
+    font-size: 17px;
+    color: var(--bg-color);
+
+    padding: 10px;
+    margin: 8px;
+    outline: unset;
+    
+    background-color: var(--elements-color);
+}
+
+.btn-search{
+    width: 20%;
+    padding: 8px;
+    margin: 8px;
+    background-color: var(--tertiary-color);
+    color: var(--elements-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-search:hover{
+    background-color: var(--quarter-color);
+}
+
+.profile-basic-info{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-name{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.avatar-user{
+    width: 150px ;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-card-user-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    width: 70%;
+    padding: 1rem;
+    border-radius: 20PX;
+
+    background-color: var(--bg-color);
+    flex-wrap: wrap;
+}
+
+.profile-card-user-info P {
+    margin-bottom: 5px;
+}
+
+.profile-card-user-item {
+    text-align: center;
+    background-color: var(--quarter-color);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.name-info {
+    margin-bottom: 1rem;
+}
+
+.name-info h1 span{
+    margin-right: 1rem;
+}
+
+.name-info a{
+   color: var(--bg-color);
+}
+
+.name-info span{
+    font-size: 1.2rem;
+    color: rgb(102, 101, 101);
+}
+
+@media (max-width:778px){
+    .name-info{
+        align-items: center;
+    }
+}
+
+.category{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    gap: 5px;
+
+    background-color: var(--elements-color);
+    color: #273128;
+    transition: 0.2s ease-in;
+    margin: 8px;
+    border-radius: 5px;
+}
+
+.category:hover{
+    background-color: var(--elements-hover);
+}
+
+.category h2 {
+    font-weight: 600;
+}
+
+.avatar-club{
+    width: 50px;
+    height: 50px;
+}
+
+.clubs{
+    grid-area: clubs;
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    overflow: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--elements-color);
+}
+
+.user-clubs{
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--elements-hover);
+    color: var(--elements-color);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.356);
+    min-width: 171px;
+    min-height: 134px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.user-clubspp{
+    padding: 0 0 10px 0;
+    border-radius: 8px;
+
+    min-width: 171px;
+    min-height: 134px;
+    background-color: var(--quarter-color);
+}
+
+.clubs::-webkit-scrollbar {
+    width: 12px;   
+  }
+  
+  .clubs::-webkit-scrollbar-track {
+    background: var(--quarter-color);
+  }
+  
+  .clubs::-webkit-scrollbar-thumb {
+    background-color: var(--elements-color); 
+    border-radius: 20px;    
+    border: 2px solid var(--bg-color);
+  }
+
+.user-clubs:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 4px 0px var(--bg-color);
+}
+
+.user-clubs:focus{
+    transform: scale(0.8);
+    box-shadow: 4px 4px 4px 0px var(--bg-color);
+}
