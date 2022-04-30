@@ -140,13 +140,16 @@ main{
 
 .profile-basic-info{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 .avatar-name{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 30px;
 }
@@ -291,4 +294,24 @@ main{
 .user-clubs:focus{
     transform: scale(0.8);
     box-shadow: 4px 4px 4px 0px var(--bg-color);
+}
+
+@media (max-width:848px){
+    .grid{
+        grid:
+            "profile profile profile" 
+            "profile profile profile"  
+            "mode-game mode-game mode-game"
+            "clubs clubs clubs" ;
+            gap: 20px;
+    }
+    .avatar-name {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 661px) {
+    .profile-basic-info{
+        justify-content: center;
+    }
 }
