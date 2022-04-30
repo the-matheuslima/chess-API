@@ -13,3 +13,7 @@ Eu aprendi como usar modulos e com isso o gerenciameto de pastas, além disso co
 - grid
 - fetch
 - modulos
+
+
+https://user-images.githubusercontent.com/96140653/166116660-96bba7f0-ebf8-4dbd-b371-93f2c8116009.mp4
+
