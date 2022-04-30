@@ -3,6 +3,7 @@ const moment = require('moment');
 const screen = {
     userProfile: document.querySelector('#profile'),
     renderUser(user) {
+        this.userProfile.innerHTML =""
         this.userProfile.innerHTML = `
             <div class="profile-basic-info">
                 <div class="avatar-name">
@@ -24,7 +25,7 @@ const screen = {
             <div class="profile-card-user-info">
                 <div class="profile-card-user-item">
                     <p>last time online</p>
-                    <span> ${moment.unix(user.last_online).format('LT')} ago</span>
+                    <span> ${moment.unix(user.last_online).fromNow()}</span>
                 </div>
                 <div class="profile-card-user-item">
                     <p>followers</p>
@@ -35,14 +36,14 @@ const screen = {
     },
     userStatus: document.querySelector('.mode-game'),
     renderStatus({chess_blitz, chess_bullet, chess_daily, chess_rapid }){
-        this.userStatus.innerHTML = `
-      
+        this.userStatus.innerHTML =""
+        this.userStatus.innerHTML = `      
             <a href="${chess_blitz.best.game}" target="_blank" class="category">
                 <h2 class-"mode-title">Blitz</h2>
                 <div>
                     <p>win ${chess_blitz.record.win}</p>
                     <p>loss: ${chess_blitz.record.loss}</p>
-                    <p>rating atual:  ${chess_blitz.best.rating}</p>
+                    <p>current rating: ${chess_blitz.best.rating}</p>
                 </div>
             </a>
       
@@ -52,7 +53,7 @@ const screen = {
                 <div>
                     <p>win ${chess_bullet.record.win}</p>
                     <p>loss: ${chess_bullet.record.loss}</p>
-                    <p>rating atual:  ${chess_bullet.best.rating}</p>
+                    <p>current rating:  ${chess_bullet.best.rating}</p>
                 </div>
             </a>
 
@@ -61,7 +62,7 @@ const screen = {
                 <div>
                     <p>win ${chess_daily.record.win}</p>
                     <p>loss: ${chess_daily.record.loss}</p>
-                    <p>rating atual:  ${chess_daily.best.rating}</p>
+                    <p>current rating:  ${chess_daily.best.rating}</p>
                 </div>
             </a>
 
@@ -70,16 +71,15 @@ const screen = {
                 <div>
                     <p>win ${chess_rapid.record.win}</p>
                     <p>loss: ${chess_rapid.record.loss}</p>
-                    <p>rating atual:  ${chess_rapid.best.rating}</p>
+                    <p>current rating:  ${chess_rapid.best.rating}</p>
                 </div>
             </a>
-
         `
     },
     userClubs: document.querySelector('.clubs'),
     renderClubs(clubs) {
+        this.userClubs.innerHTML = ""
         clubs.forEach(club => {
-       
             this.userClubs.innerHTML += `
             <div class="user-clubspp">
                 <a class="user-clubs" target="_blank" href="${club.url}">
