@@ -1,13 +1,13 @@
 {
-  "name": "api-chess-mode",
+  "name": "api-chess",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto que consome a API do chess.com",
   "main": "js/main.js",
   "scripts": {
     "start": "webpack --watch --config dev.webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Matheus Lima",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.72.0",
@@ -15,5 +15,13 @@
   },
   "dependencies": {
     "moment": "^2.29.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-matheuslima/chess-API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/the-matheuslima/chess-API/issues"
+  },
+  "homepage": "https://github.com/the-matheuslima/chess-API#readme"
 }
